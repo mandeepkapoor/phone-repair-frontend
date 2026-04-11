@@ -1,0 +1,22 @@
+<nav class="navbar">
+  <div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="left">
+      <div class="logo" routerLink="/">
+        A to Z Gadgets
+      </div>
+
+      <div class="nav-links">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        <a routerLink="/repairs" routerLinkActive="active">Repairs</a>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+      <a routerLink="/book-repair" class="cta">Book Repair</a>
+    </div>
+
+  </div>
+</nav>
