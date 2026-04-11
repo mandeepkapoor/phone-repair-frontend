@@ -4,61 +4,78 @@
   padding: 40px 20px;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
 .subtitle {
   text-align: center;
   color: #666;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 label {
   display: block;
   margin-top: 15px;
-  font-weight: 500;
 }
 
-input,
-textarea {
+input, textarea, select {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   margin-top: 5px;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 14px;
+  border-radius: 6px;
 }
 
-textarea {
-  min-height: 80px;
+.postcode-row {
+  display: flex;
+  gap: 10px;
 }
 
-button {
-  width: 100%;
-  margin-top: 25px;
-  padding: 14px;
+.postcode-row input {
+  flex: 1;
+}
+
+.postcode-row button {
+  padding: 10px;
   background: black;
   color: white;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
+  border-radius: 6px;
 }
 
-button:disabled {
-  background: #ccc;
-  cursor: not-allowed;
+button[type="submit"] {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
 }
 
 .note {
   margin-top: 20px;
-  font-size: 13px;
   text-align: center;
+  font-size: 13px;
   color: #777;
 }
-.error {
-  color: red;
-  font-size: 12px;
+
+.phone-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.prefix {
+  padding: 10px 12px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.phone-row input {
+  flex: 1;
 }

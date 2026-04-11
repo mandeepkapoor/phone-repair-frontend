@@ -1,0 +1,54 @@
+<div class="container">
+  <h1>Select Your Repair</h1>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+    <!-- BRAND -->
+    <label>Device Brand</label>
+    <select formControlName="brand" (change)="onBrandChange()">
+      <option value="">Select brand</option>
+      <option *ngFor="let b of brands" [value]="b">
+        {{ b }}
+      </option>
+    </select>
+
+    <!-- MODEL -->
+    <div *ngIf="selectedModels.length > 0">
+      <label>Device Model</label>
+      <select formControlName="model">
+        <option value="">Select model</option>
+        <option *ngFor="let m of selectedModels" [value]="m">
+          {{ m }}
+        </option>
+      </select>
+    </div>
+
+    <!-- COLOUR -->
+    <div *ngIf="form.value.model">
+      <label>Device Colour</label>
+      <select formControlName="colour">
+        <option value="">Select colour</option>
+        <option *ngFor="let c of colours" [value]="c">
+          {{ c }}
+        </option>
+      </select>
+    </div>
+
+    <!-- REPAIR -->
+    <div *ngIf="form.value.colour">
+      <label>Repair Type</label>
+      <select formControlName="repair">
+        <option value="">Select repair</option>
+        <option *ngFor="let r of repairs" [value]="r">
+          {{ r }}
+        </option>
+      </select>
+    </div>
+
+    <!-- SUBMIT -->
+    <button type="submit" [disabled]="form.invalid">
+      Continue
+    </button>
+
+  </form>
+</div>
